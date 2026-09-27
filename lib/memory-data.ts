@@ -1,6 +1,6 @@
 export type Photo = { id: string; title: string; date: string; place: string; album: string; memoryId: string; tile?: number; url?: string; favorite?: boolean };
 export type Memory = { id: string; title: string; date: string; place: string; description: string; photoIds: string[]; tags: string[] };
-export type ArchiveFile = { id: string; name: string; kind: 'folder' | 'photo' | 'audio' | 'document'; parent: string; date: string; size: string; photoId?: string; url?: string; favorite?: boolean; trashed?: boolean };
+export type ArchiveFile = { id: string; name: string; kind: 'folder' | 'photo' | 'audio' | 'document'; parent: string; date: string; size: string; photoId?: string; url?: string; content?: string; favorite?: boolean; trashed?: boolean };
 export type Track = { id: string; title: string; artist: string; album: string; duration: number; url?: string; memoryId?: string };
 
 export const demoPhotos: Photo[] = Array.from({length:10},(_,index)=>{
@@ -23,7 +23,8 @@ export const demoFiles: ArchiveFile[] = [
  {id:'personal-collection',name:'My Photos',kind:'folder',parent:'memories',date:'',size:'10 photos'},
  ...demoPhotos.map(p=>({id:p.id,name:`${p.title}.jpeg`,kind:'photo' as const,parent:'photos',date:'',size:'Photo',photoId:p.id})),
  ...demoTracks.map(t=>({id:t.id,name:`${t.title}.mp3`,kind:'audio' as const,parent:'music',date:'',size:'Built-in MP3'})),
- {id:'letter-1',name:'A note to remember.txt',kind:'document',parent:'letters',date:'',size:'1 KB'},
+ {id:'letter-1',name:'A note to remember.txt',kind:'document',parent:'letters',date:'',size:'1 KB',content:'Some days become memories before we notice. Keep this one close.'},
+ {id:'letter-2',name:'23.12.23.txt',kind:'document',parent:'letters',date:'',size:'1 KB',content:['SOOOO, i was just wondering if you want to be my bf?? cz like every night, my heart always feels like kuenceng yk','idk tp i still love u omg ky bye udh gamau on wa','dag dig dug, AND EVERY NIGHT I ALWAYS MIMPIIN LUUUUUU','tp kalo u nolak si gapapa, u yang pilih aja'].join('\n\n')},
 ];
 export const wallpapers = [
  {id:'sonoma',name:'Sonoma Hills',style:`url(${import.meta.env.BASE_URL}assets/sonoma-inspired.png)`},
