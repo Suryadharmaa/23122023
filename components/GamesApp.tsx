@@ -5,9 +5,9 @@ import { ArrowRight, Check, Eye, RotateCcw, Trophy } from 'lucide-react';
 import './games.css';
 
 const levels = [
-  { title: 'Si Manis di Kasur', image: `${import.meta.env.BASE_URL}assets/games/cat-01.jpeg`, columns: 3, rows: 3 },
-  { title: 'Si Kecil Putih', image: `${import.meta.env.BASE_URL}assets/games/cat-02.jpeg`, columns: 3, rows: 4 },
-  { title: 'Si Oren Santai', image: `${import.meta.env.BASE_URL}assets/games/cat-03.jpeg`, columns: 4, rows: 4 },
+  { title: 'Cipondut', image: `${import.meta.env.BASE_URL}assets/games/cat-01.jpeg`, columns: 3, rows: 3 },
+  { title: 'Cikonduy', image: `${import.meta.env.BASE_URL}assets/games/cat-02.jpeg`, columns: 3, rows: 4 },
+  { title: 'Chimdut', image: `${import.meta.env.BASE_URL}assets/games/cat-03.jpeg`, columns: 4, rows: 4 },
 ] as const;
 
 type Best = { moves: number; seconds: number };

@@ -46,6 +46,3 @@ next-env.d.ts
 /work/
 
 dist-pages/
-
-# Keep locally imported music out of public Pages
-public/music/
