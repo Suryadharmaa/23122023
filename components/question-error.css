@@ -1,0 +1,10 @@
+.icon-question{background:linear-gradient(145deg,#69717f,#394150);color:white;font-weight:750}
+.question-error{margin:auto;width:min(340px,calc(100vw - 36px));padding:28px 26px 22px;border:1px solid #ffffff70;border-radius:16px;background:#f5f5f7;color:#25252b;box-shadow:0 24px 90px #0006;text-align:center}
+.question-error::backdrop{background:#0004}
+.question-error-symbol{color:#e25752;margin:0 auto 12px}
+.question-error h2{font-size:17px;font-weight:700;margin:0 0 8px}
+.question-error p{font-size:14px;line-height:1.5;margin:0 0 22px;overflow-wrap:anywhere}
+.question-error form{margin:0}
+.question-error button{width:100%;border:0;border-radius:8px;background:var(--accent,#0a84ff);color:white;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer}
+.question-error button:focus-visible{outline:2px solid var(--accent,#0a84ff);outline-offset:3px}
+.dark .question-error{background:#292a30;color:#f5f5f7;border-color:#ffffff26}
